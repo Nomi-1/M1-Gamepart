@@ -3,3 +3,5 @@
 ## Exercise
 
 This is the project delivery for the course(see above). In some cases, external sources were used. These are referenced in the code.
+
+###This repo is for study purposes only
