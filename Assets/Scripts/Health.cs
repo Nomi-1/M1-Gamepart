@@ -49,7 +49,7 @@ public class Health : MonoBehaviour
             if (monster)
             {
                 Destroy(transform.parent.gameObject);
-                spawn.countMosters--; // Track the monster in scene after some got destoried
+                spawn.countMosters--; // Track the monster in scene after some got destroyed
                 if (spawn.countMosters == 0) {
                     UnityEditor.EditorApplication.isPlaying = false;
                     Application.Quit();
