@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /* 
@@ -43,17 +44,24 @@ public class Health : MonoBehaviour
         else {
             if (castle) {
                 castle.destroyCastle();
-                new WaitForSeconds(5);
-                Application.Quit();
+                StartCoroutine(wait());
             }
             if (monster)
             {
                 Destroy(transform.parent.gameObject);
                 spawn.countMosters--; // Track the monster in scene after some got destoried
                 if (spawn.countMosters == 0) {
+                    UnityEditor.EditorApplication.isPlaying = false;
                     Application.Quit();
                 }
             }
         }
+    }
+    // src: https://docs.unity3d.com/ScriptReference/WaitForSecondsRealtime.html
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(3);
+        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 }
