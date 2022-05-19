@@ -12,6 +12,8 @@ public class Spawn : MonoBehaviour
 {
     public GameObject monsterPrefab;
     public float interval = 3;
+    public int countMosters = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +22,7 @@ public class Spawn : MonoBehaviour
     void SpawnNext()
     {
         Instantiate(monsterPrefab, transform.position, Quaternion.identity);
+        countMosters++;
+        Debug.Log("SpawnNext " + countMosters);
     }
 }
