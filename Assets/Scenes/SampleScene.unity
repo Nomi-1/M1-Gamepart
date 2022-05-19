@@ -2033,6 +2033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterPrefab: {fileID: 865508680591013931, guid: 8941a341d5b4f634d824cd56e8295b6a, type: 3}
   interval: 3
+  countMosters: 0
 --- !u!4 &1386596078
 Transform:
   m_ObjectHideFlags: 0
@@ -3215,6 +3216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castle: {fileID: 0}
+  monster: {fileID: 0}
+  spawn: {fileID: 0}
 --- !u!1001 &3697060271626767911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74886,14 +74889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Castle
       objectReference: {fileID: 0}
-    - target: {fileID: 4249846948788973191, guid: ebcc34eb06464e747a0991278db8a676, type: 3}
-      propertyPath: m_RootOrder
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 4845787943518195018, guid: ebcc34eb06464e747a0991278db8a676, type: 3}
-      propertyPath: castle
+    - target: {fileID: 5964270614956464712, guid: ebcc34eb06464e747a0991278db8a676, type: 3}
+      propertyPath: spawn
       value: 
-      objectReference: {fileID: 3114372249359377417, guid: ebcc34eb06464e747a0991278db8a676, type: 3}
+      objectReference: {fileID: 1386596077}
     - target: {fileID: 6910906480259177752, guid: ebcc34eb06464e747a0991278db8a676, type: 3}
       propertyPath: m_RootOrder
       value: 9

@@ -22,7 +22,6 @@ public class Spawn : MonoBehaviour
     void SpawnNext()
     {
         Instantiate(monsterPrefab, transform.position, Quaternion.identity);
-        countMosters++;
-        Debug.Log("SpawnNext " + countMosters);
+        countMosters++; // Count the total number of monsters
     }
 }

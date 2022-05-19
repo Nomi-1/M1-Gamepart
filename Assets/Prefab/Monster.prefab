@@ -459,4 +459,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castle: {fileID: 3114372249359377417, guid: ebcc34eb06464e747a0991278db8a676, type: 3}
   monster: {fileID: 7894941668808627056}
-  spawn: {fileID: 1094849122249080966, guid: 344d5ec04b74abf4880652da052c1d52, type: 3}
+  spawn: {fileID: 0}

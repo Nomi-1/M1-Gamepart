@@ -14,22 +14,19 @@ public class Health : MonoBehaviour
     Castle castle;
     [SerializeField]
     Monster monster;
-    [SerializeField]
     Spawn spawn;
-   // int countDeadMonsters;
-   // int test;
 
     // Start is called before the first frame update
     void Start()
     {
         displayLevel = GetComponent<TextMesh>();
+        spawn = FindObjectOfType<Spawn>();
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.forward = Camera.main.transform.forward;
-        //test = spawn.countMosters;
     }
 
     public int current()
@@ -39,8 +36,6 @@ public class Health : MonoBehaviour
 
     public void decrease()
     {
-        Debug.Log(spawn.countMosters);
-
         if (current() > 1)
         {
             displayLevel.text = displayLevel.text.Remove(displayLevel.text.Length - 1);
@@ -48,17 +43,16 @@ public class Health : MonoBehaviour
         else {
             if (castle) {
                 castle.destroyCastle();
-              //  new WaitForSeconds(5);
-               Application.Quit();
+                new WaitForSeconds(5);
+                Application.Quit();
             }
             if (monster)
             {
                 Destroy(transform.parent.gameObject);
-               /* countDeadMonsters =- 1;
-                if ((test - countDeadMonsters) == 0) {
+                spawn.countMosters--; // Track the monster in scene after some got destoried
+                if (spawn.countMosters == 0) {
                     Application.Quit();
                 }
-                Debug.Log(test + " Monsters " + (test - countDeadMonsters));*/
             }
         }
     }
